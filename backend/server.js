@@ -1,8 +1,10 @@
 const express = require("express");
 const router = require("./routes/goalRoutes");
 const { errorHandler } = require("./mddleware/errorMiddleWare");
+const connectDB = require("./config/db");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 8081;
+connectDB()
 
 const app = express();
 
